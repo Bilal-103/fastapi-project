@@ -6,6 +6,8 @@ from app.routers.users import router as users_router
 
 Base.metadata.create_all(bind=engine)
 
+from app.schemas.user import UserCreate
+
 app = FastAPI()
 app.include_router(users_router)
 
